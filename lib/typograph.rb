@@ -1,16 +1,28 @@
-require 'json'
-require 'httparty'
-require 'net/http'
 require 'rest-client'
+require 'json'
 
 class Typograph
-  #include HTTParty
   API_HOST = "http://mdash.ru/api.v1.php?text="
 
   def send_text(text)
     validate_text(text)
-    response = RestClient.get(API_HOST + URI.encode(text))
-    response = JSON.parse(response)
+    full_url = API_HOST + URI.encode(text)
+    begin
+      #response = RestClient.get(full_url)
+      response = RestClient::Request.execute(method: :get, url: full_url, timeout: 15)
+    rescue SocketError
+      puts "Can't connect to the typograph service - service possibly unavailable"
+      return text
+    rescue
+      RestClient::Exceptions::OpenTimeout
+      puts "Can't connect to the typograph service - connection timeout"
+      return text
+    end
+    if response.code == 200
+      response = JSON.parse(response)
+    else
+      #response.code
+    end
   end
 
   def validate_text(text)
@@ -19,4 +31,4 @@ class Typograph
 end
 
 tp = Typograph.new
-p result = tp.send_text("Тестовый - текст")
+p result = tp.send_text("Тестовый - \"текст\"")
