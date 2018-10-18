@@ -1,10 +1,17 @@
 module Typograph
   class Client
     include Validation
-    include Type
+    require_relative 'api/type_design'
 
-    def initialize(text)
-      @text = Validation::validate_text(text)
+    attr_reader :text
+
+    def initialize(text="")
+      @text = validate_text(text)
     end
+
+    def type_design(text=@text)
+      Api::Type_design.send_text(text)
+    end
+
   end
 end
