@@ -1,10 +1,12 @@
+[![Build Status](https://travis-ci.org/adancedwin/typograph-apiclient-ru.svg?branch=master)](https://travis-ci.org/adancedwin/typograph-apiclient-ru)
+
 # typograph-apiclient-ru
 Allows to type design your text with the help of the mdash.ru's API (Russian language)
 
 # How to use it
 
 ### 1. Initilize the Client class
-You can pass or not pass a text when initilizing a class. 
+You can pass or not pass a text when initilizing a class.
 When you initilize a class with a text passed it will be stored for later use in type designing.
 
 ```ruby
@@ -17,7 +19,7 @@ In case you didn't pass your text while initilization of the Client class - you 
 ```ruby
 require_relative 'typograph'
 text = Typograph::Client.new()
-p result = text.type_design("Текст — зафиксированная на носителе человеческая мысль.") 
+p result = text.type_design("Текст — зафиксированная на носителе человеческая мысль.")
 # => ""<p>Текст&nbsp;&mdash; зафиксированная на&nbsp;носителе человеческая мысль</p>"
 ```
 
