@@ -10,7 +10,7 @@ module Typograph
     end
 
     def type_design(text=@text)
-      Api::Type_design.send_text(text)
+      Api::Type_design.post_text(text)
     end
 
   end

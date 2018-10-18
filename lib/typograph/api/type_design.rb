@@ -6,7 +6,7 @@ module Typograph
     class Type_design
       API_HOST = "http://mdash.ru/api.v1.php"
 
-      def self.send_text(text)
+      def self.post_text(text)
         begin
           p response = RestClient.post(
           API_HOST,
