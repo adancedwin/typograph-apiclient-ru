@@ -17,7 +17,6 @@ module Typograph
         end
         if response.code == 200
           response = JSON.parse(response)
-          #response = Stringex::Unidecoder.encode(response)
           result = response["result"]
           unless result == "error"
             return result
