@@ -4,7 +4,7 @@ require 'json'
 module Typograph
   module Api
     class Type_design
-      API_HOST = "http://mdash.ru/api.v1.php"
+      API_HOST = "http://mdash.ru/api.v1.php".freeze
 
       def self.post_text(text)
         begin
@@ -22,7 +22,7 @@ module Typograph
             return result
           end
         else
-          #response.code
+          response.code
         end
       end
     end
