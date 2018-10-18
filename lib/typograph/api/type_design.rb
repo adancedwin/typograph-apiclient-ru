@@ -20,7 +20,7 @@ module Typograph
           #response = Stringex::Unidecoder.encode(response)
           result = response["result"]
           unless result == "error"
-            result
+            return result
           end
         else
           #response.code
