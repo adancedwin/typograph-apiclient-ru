@@ -4,7 +4,7 @@ require 'json'
 module Typograph
   module Api
     class Type_design
-      API_HOST = "https://uralsib.isimplelab.com/rest/stateful/corp/document/fordates?doc_module=ibankul&doc_type=mail2client&date_from=20181010&date_to=20181018".freeze
+      API_HOST = "http://mdash.ru/api.v1.php".freeze
 
       def self.post_text(text)
         begin
