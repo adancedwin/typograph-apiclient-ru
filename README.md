@@ -9,7 +9,7 @@ When you initilize a class with a text passed it will be stored for later use in
 
 ```ruby
 require_relative 'typograph'
-typed_text = Typograph::Client.new("Текст — зафиксированная на носителе человеческая мысль.")
+text = Typograph::Client.new("Текст — зафиксированная на носителе человеческая мысль.")
 ```
 
 ### 2. Type design your text
@@ -17,7 +17,7 @@ In case you didn't pass your text while initilization of the Client class - you 
 ```ruby
 require_relative 'typograph'
 text = Typograph::Client.new()
-p result = typed_text.type_design("Текст — зафиксированная на носителе человеческая мысль.") 
+p result = text.type_design("Текст — зафиксированная на носителе человеческая мысль.") 
 # => ""<p>Текст&nbsp;&mdash; зафиксированная на&nbsp;носителе человеческая мысль</p>"
 ```
 
@@ -25,7 +25,7 @@ In case you did - simply use #type_design method and it will work with what text
 ```ruby
 require_relative 'typograph'
 text = Typograph::Client.new("Текст — зафиксированная на носителе человеческая мысль")
-p result = typed_text.type_design
+p result = text.type_design
 # => ""<p>Текст&nbsp;&mdash; зафиксированная на&nbsp;носителе человеческая мысль</p>"
 ```
 
