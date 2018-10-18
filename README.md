@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/adancedwin/typograph-apiclient-ru.svg?branch=master)](https://travis-ci.org/adancedwin/typograph-apiclient-ru)
+[![Gem Version](https://badge.fury.io/rb/typograph-apiclient-ru.svg)](https://badge.fury.io/rb/typograph-apiclient-ru)
 
 # typograph-apiclient-ru
 Allows to type design your text with the help of the mdash.ru's API (Russian language)
