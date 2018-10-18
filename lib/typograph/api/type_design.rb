@@ -6,7 +6,6 @@ module Typograph
     class Type_design
       API_HOST = "http://mdash.ru/api.v1.php"
 
-
       def self.send_text(text)
         begin
           p response = RestClient.post(
@@ -18,8 +17,10 @@ module Typograph
         end
         if response.code == 200
           response = JSON.parse(response)
-          unless response == "error"
-            response
+          #response = Stringex::Unidecoder.encode(response)
+          result = response["result"]
+          unless result == "error"
+            result
           end
         else
           #response.code
