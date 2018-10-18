@@ -9,5 +9,5 @@ Gem::Specification.new do |s|
   s.email       = 'viitaly.platonov@gmail.com'
   s.files       = ["lib/typograph.rb"]
   s.license       = 'MIT'
-  s.add_development_dependency "rspec", "~> 3.8" 
+  s.add_development_dependency "rspec", "~> 3.8"
 end
