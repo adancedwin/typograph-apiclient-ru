@@ -2,6 +2,10 @@
 
 # typograph-apiclient-ru
 Allows to type design your text with the help of the mdash.ru's API (Russian language)
+Can be installed as a gem:
+```
+gem install readable_password_generator
+```
 
 # How to use it
 
