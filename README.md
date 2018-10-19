@@ -2,7 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/typograph-apiclient-ru.svg)](https://badge.fury.io/rb/typograph-apiclient-ru)
 
 # typograph-apiclient-ru
-Allows to type design your text with the help of the mdash.ru's API (Russian language)
+Allows to type design your text with the help of the mdash.ru's API (Russian language).
 Can be installed as a gem:
 ```
 gem install readable_password_generator
