@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.2'
   s.date        = '2018-10-19'
   s.summary     = ""
-  s.description = "Allows to type design your text with the help of the mdash.ru's API (Russian language)"
+  s.description = "Allows to type design your text with the help of the mdash.ru's API (Russian language)."
   s.homepage = 'https://github.com/adancedwin/typograph-apiclient-ru'
   s.author     = 'Vitaly Platonov'
   s.email       = 'viitaly.platonov@gmail.com'
