@@ -1,3 +1,9 @@
 language: ruby
 rvm:
   - 2.5.1
+
+deploy:
+  provider: rubygems
+  api_key: "001db83333ce6e31ac4c2ff3a73abb0a"
+  on:
+    tags: true
