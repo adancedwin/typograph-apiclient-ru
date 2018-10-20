@@ -36,7 +36,7 @@ p result = text.type_design
 # => ""<p>Текст&nbsp;&mdash; зафиксированная на&nbsp;носителе человеческая мысль</p>"
 ```
 
-### 3. Set up you error handling
+### 3. Set up your error handling
 
 ```ruby
 begin
