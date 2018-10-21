@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'typograph-apiclient-ru'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = '2018-10-21'
   s.summary     = ""
   s.description = "Allows to type design your text with the help of the mdash.ru's API (Russian language)."

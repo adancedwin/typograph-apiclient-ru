@@ -12,8 +12,8 @@ module Typograph
           API_HOST,
           {:text => text,:multipart => true}
           )
-        rescue RestClient::RequestFailed, SocketError => e
-          return "Error: #{e.message}"
+        rescue RestClient::RequestFailed, SocketError
+          text
         end
         response = JSON.parse(response)
         result = response["result"]
