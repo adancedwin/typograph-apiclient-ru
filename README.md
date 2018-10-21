@@ -20,7 +20,7 @@ p formatted_text = typograph.text("Текст — зафиксированная
 ```
 
 ### 2. Set up your error handling
-**Warning**: in case for any reason API is unavailable - the same text as passed will be returned.
+**Warning**: in case for any reason API is unavailable - the same text as passed will be returned (i.e. no error raised).
 
 ```ruby
 require_relative 'typograph'
