@@ -3,30 +3,19 @@ require_relative 'data/test_data'
 
 describe Typograph::Client do
   context "Testing with valid input to get type desinged text" do
-    it "Should create a Client class and store an accessible text value" do
-      text = Typograph::Client.new(Test_data::TEST_TEXT)
-      expect(text.text).to eql Test_data::TEST_TEXT
-    end
-
-    it "Should successfully proccess type design with API host" do
-      text = Typograph::Client.new
-      result = text.type_design(Test_data::TEST_TEXT)
+    it "Should type design the passed text" do
+      typograph = Typograph::MdashTypograph.new
+      formatted_text = typograph.text(Test_data::TEST_TEXT)
+      expect(formatted_text).to eql "<p>Текст&nbsp;&mdash; зафиксированная на&nbsp;носителе человеческая мысль.</p>"
     end
   end
 
   context "Testing with invalid input to get type desinged text" do
-    it "Should raise ArgumentError for passing nil when initializing of Client class" do
+    it "Should raise ArgumentError for passing nil to the #text method" do
       nil_text = nil
+      typograph = Typograph::MdashTypograph.new
       expect{
-        text = Typograph::Client.new(nil_text)
-      }.to raise_error(ArgumentError, "Incorrect argument given - #{nil_text.class}. Must be String!")
-    end
-
-    it "Should raise ArgumentError for passing nil to the #type_design method" do
-      nil_text = nil
-      text = Typograph::Client.new
-      expect{
-        result = text.type_design(nil_text)
+        formatted_text = typograph.text(nil_text)
       }.to raise_error(ArgumentError, "Incorrect argument given - #{nil_text.class}. Must be String!")
     end
   end
