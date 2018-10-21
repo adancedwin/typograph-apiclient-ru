@@ -10,8 +10,8 @@ gem install typograph-apiclient-ru
 
 # How to use it
 
-### 1. Type design your text
-In case you didn't pass your text while initialization of the Client class - you should pass the text with #type_design method now:
+### 1. Initialize a class and type design your text
+
 ```ruby
 require_relative 'typograph'
 typograph = Typograph::MdashTypograph.new
