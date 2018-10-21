@@ -1,4 +1,4 @@
-require 'rest-client'
+ require 'rest-client'
 require 'json'
 
 module Typograph
@@ -10,19 +10,17 @@ module Typograph
         begin
           p response = RestClient.post(
           API_HOST,
-          {:text => text ,:multipart => true}
+          {:text => text,:multipart => true}
           )
-        rescue RestClient::RequestFailed, SocketError => e #SocketError
+        rescue RestClient::RequestFailed, SocketError => e
           return "Error: #{e.message}"
         end
-        if response.code == 200
-          response = JSON.parse(response)
-          result = response["result"]
-          unless result == "error"
-            return result
-          end
+        response = JSON.parse(response)
+        result = response["result"]
+        unless result == "error"
+          result
         else
-          response.code
+          text
         end
       end
     end

@@ -1,5 +1,5 @@
 module Typograph
-  require_relative 'typograph/client'
+  require_relative 'typograph/mdashtypograph'
 
   require 'rest-client'
   require 'json'
